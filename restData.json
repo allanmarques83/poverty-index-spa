@@ -1,0 +1,17 @@
+{
+    "countrys": [{
+        "code": "BRA",
+        "country": "Brasil"
+    }, {
+        "code": "USA",
+        "country": "United States"
+    }],
+    "poverty": [
+        {
+            "id": 1,
+            "year": 2022,
+            "index": 1.34,
+            "country": "Brasil"
+        }
+    ]
+}
