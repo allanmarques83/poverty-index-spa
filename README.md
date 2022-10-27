@@ -1,27 +1,22 @@
-# Spa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+![Generic badge](https://img.shields.io/badge/Node-12-green.svg) ![Generic badge](https://img.shields.io/badge/Angular-9.0.0-red.svg)   ![Generic badge](https://img.shields.io/badge/Bootstrap-4.*-blue.svg)
 
-## Development server
+#  Poverty Indicator Project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este projeto tem finalidade de oferecer um front-end para consulta do indicador econômico que avalia a quantidade de pessoas em situação de extrema pobreza no mundo, vivendo com até $ 1,90/dia (dólar). 
 
-## Code scaffolding
+## Build (manual):
+Após clone do projeto rodar a aplicação com o comando:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    npm install
+    ng serve --open
+Acessar o navegador no endereço: http://localhost:4200/    
 
-## Build
+## Build (Docker):
+Executar os comandos abaixo:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    docker build -t povertyspa .
+    
+    docker run -p 8081:80 povertyspa:latest 
+Acessar o navegador no endereço: [http://localhost:8081/](http://localhost:8081/)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

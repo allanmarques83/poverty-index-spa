@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountryCode } from './model/country.model';
+import { Country } from './model/country.model';
 import { Poverty } from './model/poverty.model';
 import { ApiRepository } from './repository/api.repository';
 
@@ -8,15 +8,15 @@ import { ApiRepository } from './repository/api.repository';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  private countrys: CountryCode[] = [];
+  private countries: Country[] = [];
   private povertys: Poverty[] = [];
 
   constructor(private repository: ApiRepository) {
-    this.repository.getCountrys().subscribe(data => this.countrys = data);
+    this.repository.getCountries().subscribe(data => this.countries = data);
   }
 
-  get countryList(): CountryCode[] {
-    return this.countrys;
+  get countriesList(): Country[] {
+    return this.countries;
   }
 
   getPoverty(countryCode: string) {
