@@ -1,0 +1,23 @@
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>Poverty index by country</h1>
+    <p class="lead">select a country to see the Poverty metrics:</p>
+    <select #selector class="custom-select" id="exampleFormControlSelect1" (change)="getPoverty(selector.value)">
+      <option value=""></option>
+      <option *ngFor="let country of countriesList" value="{{country.code}}">{{ country.country }}</option>
+    </select>
+  </div>
+  <table class="table table-striped table-bordered table-sm">
+    <thead>
+        <tr><th>#</th><th>Country</th><th>Year</th><th>Index</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let poverty of povertyList">
+            <td>{{ poverty.id }}</td>
+            <td>{{ poverty.country }}</td>
+            <td>{{ poverty.year }}</td>
+            <td>{{ poverty.index || '--' }}</td>
+        </tr>
+    </tbody>
+  </table>
+</main>
